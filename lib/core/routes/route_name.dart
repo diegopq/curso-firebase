@@ -1,3 +1,5 @@
 class RouteName {
-  static const home = 'home';
+  static const firebase = 'firebase';
+  static const menu = 'menu';
+  static const multiLan = 'multi-idioma';
 }

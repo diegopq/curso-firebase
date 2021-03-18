@@ -1,6 +1,8 @@
 analyzer:
   strong-mode:
     implicit-casts: false
+  exclude:
+    - lib/generated/intl/messages_*.dart
 linter:
   rules:
     - annotate_overrides

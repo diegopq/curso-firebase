@@ -20,11 +20,15 @@ class HomePage extends StatelessWidget {
   }
 
   onPress() async {
-    final ide = FirebaseFirestore.instance.collection('ide');
+    final frameworks = FirebaseFirestore.instance.collection('frameworks');
     try {
-      await ide.doc('datos-anidados').update({
-        'caracteristicas.extensiones.vue': false,
+      final batch = FirebaseFirestore.instance.batch();
+      final docu = await frameworks.get();
+      // ignore: avoid_function_literals_in_foreach_calls
+      docu.docs.forEach((document) {
+        batch.delete(document.reference);
       });
+      await batch.commit();
     } catch (e) {
       print(e);
     }
@@ -93,3 +97,24 @@ class HomePage extends StatelessWidget {
 // await ide.doc('datos-anidados').update({
 //         'caracteristicas.extensiones.vue': false,
 //       });
+
+//10.- Borrar documento completo
+//final ide = FirebaseFirestore.instance.collection('ide');
+// try {
+//   await ide.doc('datos-anidados').delete();
+// } catch (e) {
+//   print(e);
+// }
+
+//11.- Borrar dato en documento
+// await len
+//           .doc('EIGGn3u5u4mK6tNMmGqA')
+//           .update({'image': FieldValue.delete()});
+
+// 12.- Escrituras en batch, en este caso borra todos los documentos de una coleccion
+// WriteBatch batch = FirebaseFirestore.instance.batch();
+//       final docu = await frameworks.get();
+//       docu.docs.forEach((document) {
+//         batch.delete(document.reference);
+//       });
+//       await batch.commit();

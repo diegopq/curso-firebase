@@ -1,0 +1,10 @@
+{
+  "helloWorld": "Hello World",
+  "textoVariable": "Hello {name}",
+  "textoMultiplesVariables": "Hello {name} {lastName}",
+  "textoPlural": "{qty, plural, zero{You have no notifications} one{You have 1 notification} other{You have {qty} notifications}}",
+  "english": "English",
+  "spanish": "Spanish",
+  "german": "German",
+  "mxSpanish": "Spanish MX"
+}

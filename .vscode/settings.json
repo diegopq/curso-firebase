@@ -2,5 +2,6 @@
     "editor.cursorBlinking": "expand",
     "editor.cursorSmoothCaretAnimation": true,
     "editor.cursorWidth": 3,
-    "editor.fontSize": 13
+    "editor.fontSize": 13,
+    "dart.flutterSdkPath": "/Users/diegopadillaquijas/fvm/versions/1.22.6"
 }

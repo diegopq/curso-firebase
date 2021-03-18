@@ -1,0 +1,10 @@
+{
+  "helloWorld": "Hola mundo desde México",
+  "textoVariable": "Hola {name}",
+  "textoMultiplesVariables": "Hola {name} {lastName}",
+  "textoPlural": "{qty, plural, zero{No tienes notificaciones} one{Solo tienes 1 notificación} other{Tienes {qty} notificaciones}}",
+  "english": "Inglés",
+  "spanish": "Español",
+  "german": "Alemán",
+  "mxSpanish": "Español MX"
+}
